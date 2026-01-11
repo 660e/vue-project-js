@@ -12,6 +12,10 @@ export default defineConfig({
     // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
       imports: ['vue', 'vue-router'],
+      eslintrc: {
+        enabled: true,
+        globalsPropValue: 'readonly',
+      },
     }),
 
     // https://tailwindcss.com/docs/installation/using-vite

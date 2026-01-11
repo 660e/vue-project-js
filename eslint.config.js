@@ -26,6 +26,7 @@ export default defineConfig([
   skipFormatting,
 
   {
+    extends: ['./.eslintrc-auto-import.json'],
     rules: {
       // https://eslint.org/docs/latest/rules/
       'no-case-declarations': 'error',
