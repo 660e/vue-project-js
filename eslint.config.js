@@ -1,5 +1,6 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
+import autoImportConfig from './.eslintrc-auto-import.js';
 import js from '@eslint/js';
 import pluginVue from 'eslint-plugin-vue';
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting';
@@ -16,6 +17,7 @@ export default defineConfig([
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...autoImportConfig.globals,
       },
     },
   },
@@ -26,7 +28,6 @@ export default defineConfig([
   skipFormatting,
 
   {
-    extends: ['./.eslintrc-auto-import.json'],
     rules: {
       // https://eslint.org/docs/latest/rules/
       'no-case-declarations': 'error',
