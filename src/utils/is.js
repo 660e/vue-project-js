@@ -1,0 +1,16 @@
+export const is = {
+  array: (value) => Array.isArray(value),
+  author: (value) => value === '明'.charCodeAt(0).toString(16),
+  bigint: (value) => Object.prototype.toString.call(value) === '[object BigInt]',
+  boolean: (value) => Object.prototype.toString.call(value) === '[object Boolean]',
+  date: (value) => Object.prototype.toString.call(value) === '[object Date]',
+  function: (value) => Object.prototype.toString.call(value) === '[object Function]',
+  map: (value) => Object.prototype.toString.call(value) === '[object Map]',
+  null: (value) => value === null,
+  number: (value) => Object.prototype.toString.call(value) === '[object Number]',
+  object: (value) => Object.prototype.toString.call(value) === '[object Object]',
+  set: (value) => Object.prototype.toString.call(value) === '[object Set]',
+  string: (value) => Object.prototype.toString.call(value) === '[object String]',
+  symbol: (value) => Object.prototype.toString.call(value) === '[object Symbol]',
+  undefined: (value) => value === void 0,
+};
